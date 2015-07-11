@@ -1,0 +1,41 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:flatui="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/option_detail_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_layout"
+    tools:context=".OptionDetailActivity"
+    tools:ignore="MergeRootFrame">
+
+    <TextView
+        android:id="@+id/txtDescription"
+        android:layout_width="255dp"
+        android:layout_height="103dp"
+        android:layout_gravity="center"
+        android:textAlignment="center"
+        android:textColor="#ffffffff"
+        android:textSize="12sp"
+        android:textStyle="bold" />
+
+    <com.cengalabs.flatui.views.FlatButton
+        android:id="@+id/btnEnter"
+        android:layout_width="138dp"
+        android:layout_height="38dp"
+        android:layout_column="1"
+
+        android:layout_gravity="bottom|center"
+        android:layout_marginBottom="30dp"
+        android:onClick="setContentView"
+
+        android:shadowColor="#A87B8F"
+        android:shadowDx="1"
+        android:shadowDy="2"
+        android:shadowRadius="5"
+        android:text="Enter"
+        android:textColor="#FFFFFF"
+        android:textSize="12sp"
+        flatui:fl_blockButtonEffectHeight="3dp"
+        flatui:fl_textAppearance="fl_light"
+        flatui:fl_theme="@array/grass" />
+</FrameLayout>

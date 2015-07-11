@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Lil\' Budgeteer</string>
+    <string name="title_option_detail">Detalle de Opciones</string>
+    <string name="title_activity_transactions">Transacciones</string>
+    <string name="hello_world">Hola mundo!</string>
+    <string name="action_settings">Ajustes</string>
+    <string name="TipodeTransaccion">Tipo de Transacción</string>
+    <string name="title_activity_configuration">ConfigurationActivity</string>
+    <string name="title_activity_report">reportActivity</string>
+    <string name="Cancel">Cancelar</string>
+
+    <string name="category_prompt">Choose a category</string>
+
+    <string-array name="category_arrays">
+        <item>Sueldo</item>
+        <item>Ventas</item>
+        <item>Amor</item>
+        <item>Transporte</item>
+        <item>Comida</item>
+        <item>Ropa</item>
+        <item>Fiestas</item>
+        <item>Deudas</item>
+        <item>Tecnología</item>
+        <item>Salud</item>
+        <item>Otros</item>
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="pick_date">pick_date</string>
+    <string name="title_activity_passwords">PasswordsActivity</string>
+    <string name="title_activity_erase_transaction">EraseTransactionActivity</string>
+    <string name="title_activity_economical_advice">EconomicalAdviceActivity</string>
+    <string name="title_activity_pie_chart_report">PieChartReportActivity</string>
+
+</resources>

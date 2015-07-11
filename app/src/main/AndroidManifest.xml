@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.krisoflies.lilbudgeteer" >
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- Librerias de dropbox.com -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/lilicon"
+        android:label="@string/app_name"
+        android:logo="@drawable/lilicon"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name=".OptionListActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".OptionDetailActivity"
+            android:label="@string/title_option_detail"
+            android:parentActivityName=".OptionListActivity" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".OptionListActivity" />
+        </activity>
+        <activity
+            android:name=".TransactionActivity"
+            android:label="@string/title_activity_transactions" >
+        </activity>
+        <activity
+            android:name=".ConfigurationActivity"
+            android:label="@string/title_activity_configuration" >
+        </activity>
+        <activity
+            android:name=".ReportActivity"
+            android:label="ReportActivity" >
+        </activity>
+        <activity android:name="com.dropbox.sync.android.DbxAuthActivity" />
+        <activity
+            android:name="com.dropbox.client2.android.AuthActivity"
+            android:launchMode="singleTask" >
+            <intent-filter>
+                <data android:scheme="db-hw990a6xuv3okv6" /> <!-- Reemplazado por el appKEY de dropbox app. -->
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name="com.dropbox.sync.android.DbxSyncService"
+            android:enabled="true"
+            android:exported="false"
+            android:label="Dropbox Sync" />
+
+        <activity
+            android:name=".PasswordsActivity"
+            android:label="PasswordsActivity" >
+        </activity>
+        <activity
+            android:name=".EraseTransactionActivity"
+            android:label="@string/title_activity_erase_transaction" >
+        </activity>
+        <activity
+            android:name=".EconomicalAdviceActivity"
+            android:label="@string/title_activity_economical_advice" >
+        </activity>
+        <activity
+            android:name=".PieChartReportActivity"
+            android:label="@string/title_activity_pie_chart_report" >
+        </activity>
+        <activity
+            android:name=".MoneyCycleActivity"
+            android:label="@string/title_activity_money_cycle" >
+        </activity>
+    </application>
+
+</manifest>

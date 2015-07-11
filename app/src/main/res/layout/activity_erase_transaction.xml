@@ -1,0 +1,214 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:flatui="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_layout"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.krisoflies.lilbudgeteer.EraseTransactionActivity">
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <TableLayout
+            android:id="@+id/tblErase"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <TableRow
+                android:id="@+id/trLastTransaction"
+                android:layout_width="fill_parent"
+                android:layout_height="70dp"
+                android:layout_marginBottom="30dp"
+                android:baselineAligned="false">
+
+                <TextView
+                    android:id="@+id/txtLastXTr"
+                    android:layout_width="180dp"
+                    android:layout_height="70dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="28dp"
+                    android:text="Last X "
+                    android:textAlignment="center"
+                    android:textColor="#ffffffff"
+                    android:textColorHighlight="#ffffffff"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <RadioGroup
+                    android:id="@+id/rgTransactNumber"
+                    android:layout_width="170dp"
+                    android:layout_height="fill_parent">
+
+                    <com.cengalabs.flatui.views.FlatRadioButton
+                        android:id="@+id/rdB1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="1"
+                        flatui:fl_size="20dip"
+                        flatui:fl_dotMargin="1dp"
+                        flatui:fl_theme="@array/grass"
+                        android:textColor="#10ecf6e5"
+                        android:textColorHighlight="#10ecf6e5"
+                        android:layout_marginBottom="7dp" />
+
+                    <com.cengalabs.flatui.views.FlatRadioButton
+                        android:id="@+id/rdB10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="10"
+                        flatui:fl_size="20dip"
+                        flatui:fl_dotMargin="1dp"
+                        flatui:fl_theme="@array/grass"
+                        android:textColor="#10ecf6e5"
+                        android:textColorHighlight="#10ecf6e5"
+                        android:layout_marginBottom="7dp" />
+
+                    <com.cengalabs.flatui.views.FlatRadioButton
+                        android:id="@+id/rdB20"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="20"
+                        flatui:fl_size="20dip"
+                        flatui:fl_dotMargin="1dp"
+                        flatui:fl_theme="@array/grass"
+                        android:textColor="#10ecf6e5"
+                        android:textColorHighlight="#10ecf6e5"/>
+                </RadioGroup>
+
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/trTransaction"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_marginBottom="30dp">
+
+                <TextView
+                    android:id="@+id/txtTransaction"
+                    android:layout_width="180dp"
+                    android:layout_height="70dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:text="Transactions  "
+                    android:textAlignment="center"
+                    android:textColor="#ffffffff"
+                    android:textColorHighlight="#ffffffff"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <LinearLayout
+                    android:id="@+id/llT"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:layout_span="2"
+                    android:orientation="vertical">
+
+                    <TableRow
+                        android:id="@+id/tblTransactions"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent">
+
+                        <Spinner
+                            android:id="@+id/spnTransaction"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/spinner_layout"/>
+                    </TableRow>
+                </LinearLayout>
+
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/trButton"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent">
+
+                <TextView
+                    android:id="@+id/txtPassword"
+                    android:layout_width="180dp"
+                    android:layout_height="70dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:text="Password"
+                    android:textAlignment="center"
+                    android:textColor="#ffffffff"
+                    android:textColorHighlight="#ffffffff"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <com.cengalabs.flatui.views.FlatEditText
+                    android:id="@+id/edtPassword"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_column="1"
+                    flatui:fl_fieldStyle="fl_box"
+                    flatui:fl_theme="@array/grass"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginBottom="10dp" />
+            </TableRow>
+
+            <TableRow
+                android:id="@+id/trChoose"
+                android:layout_width="fill_parent"
+                android:layout_height="70dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="70dp"
+                    android:layout_column="0"
+                    android:layout_marginTop="20dp"
+                    android:layout_span="2"
+                    android:orientation="horizontal">
+
+                    <com.cengalabs.flatui.views.FlatButton
+                        android:id="@+id/btnErase"
+                        android:layout_width="118dp"
+                        android:layout_height="38dp"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginTop="10dp"
+                        android:onClick="eraseTransaction"
+                        android:shadowColor="#A87B8F"
+                        android:shadowDx="1"
+                        android:shadowDy="2"
+                        android:shadowRadius="5"
+                        android:text="Erase"
+                        android:textColor="#FFFFFF"
+                        android:textSize="12sp"
+                        flatui:fl_blockButtonEffectHeight="3dp"
+                        flatui:fl_textAppearance="fl_light"
+                        flatui:fl_theme="@array/grass" />
+
+                    <com.cengalabs.flatui.views.FlatButton
+                        android:id="@+id/btnCancel"
+                        android:layout_width="118dp"
+                        android:layout_height="38dp"
+                        android:layout_column="1"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="10dp"
+                        android:shadowColor="#A87B8F"
+                        android:shadowDx="1"
+                        android:shadowDy="2"
+                        android:shadowRadius="5"
+                        android:text="Cancel"
+                        android:textColor="#FFFFFF"
+                        android:textSize="12sp"
+                        flatui:fl_blockButtonEffectHeight="3dp"
+                        flatui:fl_textAppearance="fl_light"
+                        flatui:fl_theme="@array/grass" />
+                </LinearLayout>
+            </TableRow>
+
+        </TableLayout>
+    </ScrollView>
+
+</RelativeLayout>

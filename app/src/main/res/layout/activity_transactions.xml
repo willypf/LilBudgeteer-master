@@ -1,0 +1,259 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:flatui="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/initialLay"
+    android:layout_width="wrap_content"
+    android:layout_height="fill_parent"
+    android:background="@drawable/main_layout"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.krisoflies.lilbudgeteer.TransactionActivity">
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <TableLayout
+            android:id="@+id/mainTable"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginTop="20dp">
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="70dp"
+                android:baselineAligned="false">
+
+                <com.cengalabs.flatui.views.FlatTextView
+                    android:id="@+id/txtTransaccionType"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginTop="48dp"
+                    android:text="Transaction Type"
+                    android:textAlignment="center"
+                    android:textColor="#ffffffff"
+                    android:textColorHighlight="#ffffffff"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:gravity="center_horizontal"
+                    flatui:fl_theme="@array/grass" />
+
+                <RadioGroup
+                    android:id="@+id/rdbGr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="70dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/txtTransaccionType"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="30dp">
+
+                    <com.cengalabs.flatui.views.FlatRadioButton
+                        android:id="@+id/rdBIncome"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Income"
+                        android:textColor="#ffffffff"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        flatui:fl_size="20dip"
+                        flatui:fl_dotMargin="1dp"
+                        flatui:fl_theme="@array/grass"
+                        android:layout_marginBottom="5dp" />
+
+                    <com.cengalabs.flatui.views.FlatRadioButton
+                        android:id="@+id/rdBLoss"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="false"
+                        android:text="Expense"
+                        android:textColor="#ffffffff"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        flatui:fl_size="20dip"
+                        flatui:fl_dotMargin="1dp"
+                        flatui:fl_theme="@array/grass"/>
+
+                </RadioGroup>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="70dp"
+                android:layout_marginRight="20dp">
+
+                <TextView
+                    android:id="@+id/txtData"
+                    android:layout_width="wrap_content"
+                    android:layout_height="70dp"
+                    android:text="Date"
+                    android:textColor="#ffffffff"
+                    android:textColorHighlight="#ffffffff"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <com.cengalabs.flatui.views.FlatButton
+                    android:id="@+id/btnSetDateTrans"
+                    android:layout_width="150dp"
+                    android:layout_height="38dp"
+                    android:layout_column="1"
+
+                    android:layout_marginLeft="20dp"
+                    android:onClick="showTransactionDateDialog"
+                    android:shadowColor="#A87B8F"
+                    android:shadowDx="1"
+                    android:shadowDy="2"
+                    android:shadowRadius="5"
+                    android:text="Set Date"
+                    android:textColor="#FFFFFF"
+                    android:textSize="12sp"
+                    flatui:fl_blockButtonEffectHeight="3dp"
+                    flatui:fl_textAppearance="fl_light"
+                    flatui:fl_theme="@array/grass"
+                    android:layout_marginRight="30dp"
+                    android:textAlignment="center" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="70dp"
+                android:layout_marginRight="20dp">
+
+                <TextView
+                    android:id="@+id/txtAmount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="70dp"
+                    android:text="Quantity"
+                    android:textColor="#ffffffff"
+                    android:textColorHighlight="#ffffffff"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <com.cengalabs.flatui.views.FlatEditText
+                    android:id="@+id/edtQuantity"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:inputType="number|numberDecimal"
+                    flatui:fl_fieldStyle="fl_box"
+                    flatui:fl_theme="@array/grass"
+                    android:layout_marginRight="30dp"
+                    android:layout_marginBottom="20dp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="wrap_content"
+                android:layout_height="70dp"
+                android:layout_marginRight="20dp">
+
+                <TextView
+                    android:id="@+id/txtTheme"
+                    android:layout_width="wrap_content"
+                    android:layout_height="70dp"
+                    android:text="Theme"
+                    android:textColor="#ffffffff"
+                    android:textColorHighlight="#ffffffff"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <Spinner
+                    android:id="@+id/spnThemes"
+                    android:layout_width="198dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="20dp"
+                    android:entries="@array/category_arrays"
+                    android:prompt="@string/category_prompt"
+                    android:spinnerMode="dropdown"
+                    android:layout_marginRight="30dp"
+                    android:background="@drawable/spinner_layout"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="70dp"
+                android:layout_marginRight="20dp">
+
+                <TextView
+                    android:id="@+id/txtObservations"
+                    android:layout_width="wrap_content"
+                    android:layout_height="70dp"
+                    android:text="Observations"
+                    android:textColor="#ffffffff"
+                    android:textColorHighlight="#ffffffff"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+
+                <com.cengalabs.flatui.views.FlatEditText
+                    android:gravity="bottom"
+                    android:id="@+id/edtObservation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:inputType="textMultiLine"
+                    flatui:fl_fieldStyle="fl_box"
+                    flatui:fl_theme="@array/grass"
+                    android:layout_marginRight="30dp"
+                    android:textAlignment="center"
+                    android:textStyle="normal"
+                    android:layout_marginBottom="20dp" />
+            </TableRow>
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="70dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="70dp"
+                    android:layout_column="0"
+                    android:layout_marginTop="20dp"
+                    android:layout_span="2"
+                    android:orientation="horizontal">
+
+                    <com.cengalabs.flatui.views.FlatButton
+                        android:id="@+id/btnSave"
+                        android:layout_width="118dp"
+                        android:layout_height="38dp"
+                        android:layout_marginLeft="50dp"
+                        android:layout_marginTop="10dp"
+                        android:onClick="saveTransaction"
+                        android:shadowColor="#A87B8F"
+                        android:shadowDx="1"
+                        android:shadowDy="2"
+                        android:shadowRadius="5"
+                        android:text="Save"
+                        android:textColor="#FFFFFF"
+                        android:textSize="12sp"
+                        flatui:fl_blockButtonEffectHeight="3dp"
+                        flatui:fl_textAppearance="fl_light"
+                        flatui:fl_theme="@array/grass" />
+
+                    <com.cengalabs.flatui.views.FlatButton
+                        android:id="@+id/btnCancel"
+                        android:layout_width="118dp"
+                        android:layout_height="38dp"
+                        android:layout_column="1"
+
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="10dp"
+                        android:shadowColor="#A87B8F"
+                        android:shadowDx="1"
+                        android:shadowDy="2"
+                        android:shadowRadius="5"
+                        android:text="Cancel"
+                        android:textColor="#FFFFFF"
+                        android:textSize="12sp"
+                        flatui:fl_blockButtonEffectHeight="3dp"
+                        flatui:fl_textAppearance="fl_light"
+                        flatui:fl_theme="@array/grass" />
+                </LinearLayout>
+            </TableRow>
+        </TableLayout>
+
+    </ScrollView>
+</RelativeLayout>
