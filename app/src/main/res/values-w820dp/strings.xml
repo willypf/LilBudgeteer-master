@@ -33,5 +33,15 @@
     <string name="title_activity_erase_transaction">EraseTransactionActivity</string>
     <string name="title_activity_economical_advice">EconomicalAdviceActivity</string>
     <string name="title_activity_pie_chart_report">PieChartReportActivity</string>
+    <string name="txtTrsansactionType">Tipo de transacción</string>
+    <string name="rdBIncome">Ingresos</string>
+    <string name="rdBLoss">Egresos</string>
+    <string name="btnSetDateTrans">Fijar fecha</string>
+    <string name="txtDate">Fecha</string>
+    <string name="txtTheme">Tema</string>
+    <string name="txtObservations">Observaciones</string>
+    <string name="btnSave">Guardar</string>
+    <string name="btnCancel">Cancelar</string>
+
 
 </resources>

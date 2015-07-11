@@ -35,5 +35,6 @@
     <string name="title_activity_economical_advice">EconomicalAdviceActivity</string>
     <string name="title_activity_pie_chart_report">PieChartReportActivity</string>
     <string name="title_activity_money_cycle">MoneyCycleActivity</string>
+    <string name="txtQuantity">Cantidad</string>
 
 </resources>
