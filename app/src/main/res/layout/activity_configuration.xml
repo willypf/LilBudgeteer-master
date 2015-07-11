@@ -75,7 +75,8 @@
                     android:id="@+id/trOptions"
                     android:layout_width="fill_parent"
                     android:layout_height="fill_parent"
-                    android:baselineAligned="false">
+                    android:baselineAligned="false"
+                    android:weightSum="1">
 
                     <com.cengalabs.flatui.views.FlatButton
                         android:id="@+id/btnSetIA"
@@ -83,7 +84,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="20dp"
                         android:onClick="setInitialAmount"
-                        android:text=" Set "
+                        android:text="SET"
                         flatui:fl_blockButtonEffectHeight="3dp"
                         flatui:fl_textAppearance="fl_light"
                         flatui:fl_theme="@array/grass" />
@@ -95,10 +96,11 @@
                         android:layout_height="wrap_content"
                         android:layout_marginLeft="5dp"
                         android:onClick="resetInitialAmount"
-                        android:text="   Reset   "
+                        android:text="RESET"
                         flatui:fl_blockButtonEffectHeight="3dp"
                         flatui:fl_textAppearance="fl_light"
-                        flatui:fl_theme="@array/grass" />
+                        flatui:fl_theme="@array/grass"
+                        android:layout_weight="1.14" />
                 </TableRow>
 
             </TableRow>
@@ -117,7 +119,7 @@
                     android:layout_alignParentStart="true"
                     android:layout_alignParentTop="true"
                     android:layout_marginTop="28dp"
-                    android:text="Borrowing Limit \nAlarm"
+                    android:text="Borrowing limit to alarm"
                     android:textAlignment="center"
                     android:textColor="#ffffffff"
                     android:textColorHighlight="#ffffffff"
@@ -160,7 +162,7 @@
                     android:layout_alignParentStart="true"
                     android:layout_alignParentTop="true"
                     android:layout_marginTop="28dp"
-                    android:text="Permit Observations"
+                    android:text="Allow observations"
                     android:textAlignment="center"
                     android:textColor="#ffffffff"
                     android:textColorHighlight="#ffffffff"
@@ -203,7 +205,7 @@
                     android:layout_alignParentStart="true"
                     android:layout_alignParentTop="true"
                     android:layout_marginTop="28dp"
-                    android:text="Secure transaction\nwith password"
+                    android:text="Secure transactions\nwith password"
                     android:textAlignment="center"
                     android:textColor="#ffffffff"
                     android:textColorHighlight="#ffffffff"

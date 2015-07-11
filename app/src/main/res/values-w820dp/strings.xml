@@ -42,6 +42,27 @@
     <string name="txtObservations">Observaciones</string>
     <string name="btnSave">Guardar</string>
     <string name="btnCancel">Cancelar</string>
+    <string name="txtIniAmount">Monto Inicial</string>
+    <string name="btnSetIA">Establecer</string>
+    <string name="btnResetIA">Resetear</string>
+    <string name="txtBorLimit">Establecer tope para alarma</string>
+    <string name="txtPermObserv">Permitir observaciones</string>
+    <string name="txtPPsw">Asegurar transacciones con contraseña</string>
+    <string name="txtTransaction">Transacción</string>
+    <string name="txtLastXTr">Ultimo X</string>
+    <string name="txtPassword">Contraseña</string>
+    <string name="btnErase">Borrar</string>
+    <string name="btnCancel2">Cancelar</string>
+    <string name="sugerencia">Por favor seleccione el rango de fechas para el reporte</string>
+    <string name="btnSetIniDate">Establecer Fecha</string>
+    <string name="btnSetDate2">Establecer Fecha</string>
+    <string name="btnEnter">INGRESAR</string>
+    <string name="txtUserDen">Cuenta Gmail</string>
+    <string name="txtUserKey">Contraseña Gmail</string>
+    <string name="btnSave2">Guardar</string>
+    <string name="btnCancel22">CANCELAR</string>
+    <string name="txtDropboxMessage">Imprime el reporte de las transacciones en su cuenta de Dropbox</string>
+    <string name="btnPrintotoFile">Imprimir</string>
 
 
 </resources>

@@ -32,7 +32,7 @@
         android:shadowDx="1"
         android:shadowDy="2"
         android:shadowRadius="5"
-        android:text="Enter"
+        android:text="ENTER"
         android:textColor="#FFFFFF"
         android:textSize="12sp"
         flatui:fl_blockButtonEffectHeight="3dp"

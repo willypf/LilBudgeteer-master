@@ -9,7 +9,8 @@
     android:weightSum="1">
 
     <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
-        android:text="Please select the range of dates: "/>
+        android:text="Please select the range of dates"
+         />
 
     <LinearLayout android:orientation="horizontal"
         android:layout_width="fill_parent"
@@ -29,7 +30,7 @@
             android:shadowDx="1"
             android:shadowDy="2"
             android:shadowRadius="5"
-            android:text="Set Date"
+            android:text="SET DATE"
             android:textColor="#FFFFFF"
             android:textSize="12sp"
             flatui:fl_blockButtonEffectHeight="3dp"
@@ -64,7 +65,7 @@
             android:shadowDx="1"
             android:shadowDy="2"
             android:shadowRadius="5"
-            android:text="Set Date"
+            android:text="SET DATE"
             android:textColor="#FFFFFF"
             android:textSize="12sp"
             flatui:fl_blockButtonEffectHeight="3dp"
